@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "7f1c884a-c460-40fd-8346-e157ede45009",
+		"name": "Seguridad",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "NO_TOKEN",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/numero",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"numero"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TOKEN_EXPIRADO",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3ODQ3NzcyOSwianRpIjoiOThhMjZmOGEtYmM2ZS00ZjYxLTgyZTItMzBkNDNjMjRiN2MzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjc4NDc3NzI5LCJleHAiOjE2Nzg0Nzg2MjksImlzX2FkbWluaXN0cmF0b3IiOnRydWV9.vynh2Acw9NQcimMDq84t8miogn0_KHkPhXEcnh_sBKU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/numero",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"numero"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TOKEN_INVALIDO",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJccmVzaCI6ZmFsc2UsImlhdCI6MTY3ODQ3NzcyOSwianRpIjoiOThhMjZmOGEtYmM2ZS00ZjYxLTgyZTItMzBkNDNjMjRiN2MzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjc4NDc3NzI5LCJleHAiOjE2Nzg0Nzg2MjksImlzX2FkbWluaXN0cmF0b3IiOnRydWV9.vynh2Acw9NQcimMDq84t8miogn0_KHkPhXEcnh_sBKZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/numero",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"numero"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TOKEN_VALIDO",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3ODYzNTM0MywianRpIjoiMGFhNDNjYTItNzNhYS00NWRjLWJjMDAtMDk0OTAxMGFkMmVkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjc4NjM1MzQzLCJleHAiOjE2Nzg2MzYyNDMsImlzX2FkbWluaXN0cmF0b3IiOnRydWV9.H4dYHamSi5htqmGjXPyXXxx_sQQNB0P4Fov3pQaEyv4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/numero",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"numero"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
