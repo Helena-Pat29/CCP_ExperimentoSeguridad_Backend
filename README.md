@@ -5,6 +5,7 @@
 # Introducción
 
 # Backend
+```pip3 install -r requirements.txt```
 
 # Ejecución y Reporte del experimento
 Para la ejecución del experimento y posterior reporte es necesario instalar las librerias de npm *newman-reporter-html* y *newman-reporter-htmlextra*
