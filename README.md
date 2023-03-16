@@ -1,6 +1,7 @@
 - [Introducción](#introducción)
 - [Backend](#backend)
 - [Ejecución y Reporte del experimento](#ejecución-y-reporte-del-experimento)
+- [Presentación del experimento](#presentación-del-experimento)
 
 # Introducción
 Este experimento tiene como objetivo validar el efecto de la implementación de un componente Autenticador asociado al microservicio de Ventas de la aplicación, permitiendo que mediante el uso de la librería JWT sea posible controlar los accesos a este componente y garantizar el cumplimiento del requisito de calidad estipulado, en este caso, la seguridad.
