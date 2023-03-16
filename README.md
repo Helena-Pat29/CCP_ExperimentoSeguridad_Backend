@@ -8,14 +8,14 @@ Este experimento tiene como objetivo validar el efecto de la implementación de 
 # Backend
 ```pip3 install -r requirements.txt```
 
+Luego de instalar los requerimientos, se debe levantar la aplicación ejecutando el comando *flask run*.
+
 # Ejecución y Reporte del experimento
 Para la ejecución del experimento y posterior reporte es necesario instalar las librerias de npm *newman-reporter-html* y *newman-reporter-htmlextra*
 
 ```npm install -g  newman-reporter-html```
 
 ```npm install -g  newman-reporter-htmlextra```
-
-De igual forma, se debe levantar la aplicación ejecutando el comando *flask run*
 
 Cuando se hayan instalado las librerías necesarias y se haya levantado la aplicación, se puede realizar una petición POST por medio de la herramienta Postman, para obtener el token válido que será necesario para las pruebas. Este token se carga en la configuración de las peticiones a realizar de manera que cuando se pretende hacer la prueba con el token válido, pueda responder bien, y para las demás, se realiza una modificación en la cadena para que pueda ser probado con las otras colecciones de peticiones.
 
