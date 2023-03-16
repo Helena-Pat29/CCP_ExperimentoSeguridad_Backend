@@ -15,6 +15,10 @@ Para la ejecución del experimento y posterior reporte es necesario instalar las
 
 ```npm install -g  newman-reporter-htmlextra```
 
+De igual forma, se debe levantar la aplicación ejecutando el comando *flask run*
+
+Cuando se hayan instalado las librerías necesarias y se haya levantado la aplicación, se puede realizar una petición POST por medio de la herramienta Postman, para obtener el token válido que será necesario para las pruebas. Este token se carga en la configuración de las peticiones a realizar de manera que cuando se pretende hacer la prueba con el token válido, pueda responder bien, y para las demás, se realiza una modificación en la cadena para que pueda ser probado con las otras colecciones de peticiones.
+
 Se creó una colección de peticiones en Postman en donde se incluyeron los siguientes escenarios:
 -NO_TOKEM
 -TOKEN_EXPIRADO
@@ -34,3 +38,6 @@ Desde el directorio raíz del repositorio, ejecutar el siguiente comando:
 Al terminar la ejecución se generará una carpeta llamada *newman* que contiene un archivo *html* con los resultados de la prueba.
 
 Al abrir el archivo html es posible visualizar el número de las peticiones exitosas y el detalle de la información enviada y recibida 
+
+# Presentación del experimento
+Video presentación de experimento: https://www.youtube.com/watch?v=xC2xcGugRow
